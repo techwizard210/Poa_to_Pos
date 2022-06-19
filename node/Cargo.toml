@@ -36,6 +36,9 @@ sp-authority-discovery = { version = "4.0.0-dev", git = "https://github.com/pari
 sp-consensus-babe = { version = "0.10.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-keystore = { version = "0.12.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-transaction-pool = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+pallet-contracts-rpc = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+pallet-mmr-rpc = { version = "3.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+substrate-state-trie-migration-rpc = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 
 
 clap = { version = "3.1.6", features = ["derive"] }
@@ -57,6 +60,7 @@ sp-finality-grandpa = { version = "4.0.0-dev", git = "https://github.com/parityt
 sc-client-api = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-runtime = { version = "6.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-timestamp = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+sp-authorship = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-inherents = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 sp-keyring = { version = "6.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 frame-system = { version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
@@ -79,6 +83,9 @@ frame-benchmarking-cli = { version = "4.0.0-dev", git = "https://github.com/pari
 
 # Local Dependencies
 node-template-runtime = { version = "4.0.0-dev", path = "../runtime" }
+node-rpc = { version = "3.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+node-primitives = { version = "2.0.0", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
+node-executor = { version = "3.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }
 
 # CLI-specific dependencies
 try-runtime-cli = { version = "0.10.0-dev", optional = true, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.19" }

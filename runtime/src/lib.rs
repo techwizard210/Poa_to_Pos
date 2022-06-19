@@ -513,6 +513,7 @@ impl_runtime_apis! {
 			_slot: sp_consensus_babe::Slot,
 			authority_id: sp_consensus_babe::AuthorityId,
 		) -> Option<sp_consensus_babe::OpaqueKeyOwnershipProof> {
+			None
 			// use codec::Encode;
 
 			// Historical::prove((sp_consensus_babe::KEY_TYPE, authority_id))
