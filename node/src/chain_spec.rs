@@ -159,7 +159,7 @@ fn testnet_genesis(
 		// 	authorities: initial_authorities.iter().map(|x| (x.0.clone())).collect(),
 		// },
 		babe: BabeConfig {
-			authorities: initial_authorities.iter().map(|x| (x.2.clone(), 1)).collect(),
+			authorities: vec![],
 		},
 		grandpa: GrandpaConfig {
 			// authorities: initial_authorities.iter().map(|x| (x.1.clone(), 1)).collect(),

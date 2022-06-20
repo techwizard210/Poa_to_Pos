@@ -51,13 +51,13 @@ pub type TransactionPool = sc_transaction_pool::FullPool<Block, FullClient>;
 /// Fetch the nonce of the given `account` from the chain state.
 ///
 /// Note: Should only be used for tests.
-pub fn fetch_nonce(client: &FullClient, account: sp_core::sr25519::Pair) -> u32 {
-	let best_hash = client.chain_info().best_hash;
-	client
-		.runtime_api()
-		.account_nonce(&generic::BlockId::Hash(best_hash), account.public().into())
-		.expect("Fetching account nonce works; qed")
-}
+// pub fn fetch_nonce(client: &FullClient, account: sp_core::sr25519::Pair) -> u32 {
+// 	let best_hash = client.chain_info().best_hash;
+// 	client
+// 		.runtime_api()
+// 		.account_nonce(&generic::BlockId::Hash(best_hash), account.public().into())
+// 		.expect("Fetching account nonce works; qed")
+// }
 
 // /// Create a transaction using the given `call`.
 // ///
@@ -134,7 +134,7 @@ pub fn new_partial(
 			impl Fn(
 				node_rpc::DenyUnsafe,
 				sc_rpc::SubscriptionTaskExecutor,
-			) -> Result<node_rpc::IoHandler, sc_service::Error>,
+			) -> node_rpc::IoHandler,
 			(
 				sc_consensus_babe::BabeBlockImport<Block, FullClient, FullGrandpaBlockImport>,
 				sc_finality_grandpa::LinkHalf<Block, FullClient, FullSelectChain>,
@@ -274,7 +274,7 @@ pub fn new_partial(
 				},
 			};
 
-			node_rpc::create_full(deps, rpc_backend.clone()).map_err(Into::into)
+			// node_rpc::create_full(deps, rpc_backend.clone()).map_err(Into::into)
 		};
 
 		(rpc_extensions_builder, rpc_setup)
@@ -463,11 +463,11 @@ pub fn new_full_base(
 				}
 			});
 		let (authority_discovery_worker, _service) =
-			sc_authority_discovery::new_worker_and_service_with_config(
-				sc_authority_discovery::WorkerConfig {
-					publish_non_global_ips: auth_disc_publish_non_global_ips,
-					..Default::default()
-				},
+			sc_authority_discovery::new_worker_and_service(
+				// sc_authority_discovery::WorkerConfig {
+				// 	publish_non_global_ips: auth_disc_publish_non_global_ips,
+				// 	..Default::default()
+				// },
 				client.clone(),
 				network.clone(),
 				Box::pin(dht_event_stream),
