@@ -65,7 +65,10 @@
         ]
       },
       "babe": {
-        "authorities": [],
+        "authorities": [
+          "5HWHDzRkxH9FB4Gjqw5vzo6k72BqhqyHkeVkhUWZf2ns3CQP",
+          "5EnrQLjmpMxDT1cFzBvxh8k4bF2BTCMUShUVDQyeChG8Ni3K"
+        ],
         "epochConfig": {
           "c": [
             1,
@@ -75,7 +78,16 @@
         }
       },
       "grandpa": {
-        "authorities": []
+        "authorities": [
+         [
+           "5G6QXeVp7hxRSquddApb4w72CTJe3tMkxGhzrNsJrtjA3cKb",
+           1
+         ],
+         [
+           "5Ez9ajmsnT9UEgxh7wSKkmizrktGHLAC9qAGUkK3CV1KWRzS",
+           1
+         ]
+        ]
       },
       "staking": {
         "historyDepth": 84,
